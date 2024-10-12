@@ -22,7 +22,7 @@
 2. Create the bucket, then click "Upload" to upload a file/folder
 ![uploaded a file](img/gcp/upload_process_3.png)
 
-### Uploading outside of GCP to Cloud Storage
+### Uploading outside of GCP to Cloud Storage + Python code
 3. Go to "IAM - IAM & Admin"
 ![Click "IAM - IAM & Admin" in search bar](img/gcp/upload_process_4.png)
 4. Hover to left bar and click "Service Accounts"
@@ -30,11 +30,13 @@
 5. Click "Create Service Account
 6. Changed role to "Editor;" the rest of was left alone
 ![Changed role to "Editor"](img/gcp/upload_process_6.png)
-7. Create the account, click "Manage keys," then create a new key as JSON
+7. Create the account, click "Manage keys"
 ![Click "Manage keys"](img/gcp/upload_process_7.png)
+8. Create new key as JSON
 ![Created a JSON key](img/gcp/upload_process_8.png)
-8. Rename file as desired, then put it into a repository
-9. Ignore the file in .gitignore
-
-## Python code for uploading files to Azure Blob Storage and GCP Cloud Storage.
-### GCP
+9. Rename file as desired, then put it into a repository
+10. Ignore the file in .gitignore
+11. Create and activate a venv, then install google-cloud-storage and pillow with pip
+12. Create python code to upload files to storage
+    * This repo's code is found in [gcp_storage.py](https://github.com/dnce17/HHA504_assignment_storage/blob/main/gcp_storage.py)
+        * The comments note the things to replace with your key, bucket name, etc. 
