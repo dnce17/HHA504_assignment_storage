@@ -30,18 +30,20 @@
     ![Click "Generate SAS"](img/azure/upload_process_6.png)
         * Leave everything as default and click "Generate SAS token and URL"
     ![Generate SAS token and URL](img/azure/upload_process_7.png)
-        * Copy and paste the Blob SAS URL into another tab to see the image or a file will be downloaded depending on what you uploaded
+        * Copy and paste the Blob SAS URL into another tab to view your item
 
 ### Uploading outside of Azure to storage + Python code
 7. Go back to "Storage Accounts" and click the resource made before
 8. On the left panel, click "Security + networking," then "Access keys"
+![Go to access keys of your storage account](img/azure/upload_process_8.png)
 9. Show the key, then copy it
-10. Create python code to upload files to storage
-    * This repo's code is found in [azure_storage.py](https://github.com/dnce17/HHA504_assignment_storage/blob/main/gcp_storage.py)
-        * The comments note the things to replace with your key, bucket name, etc. 
-
 10. Paste the key into an .env file
     * e.g. AZURE_STORAGE_ACCESS_KEY='some_key_name'
+    * NOTE: If you do this in Google Colab, name the file to something that is not .env first because the file will disappear if you do. Paste the key into the file, then rename it to .env
+11. Create python code to upload files to storage
+    * This repo's code is found in [azure_storage.py](https://github.com/dnce17/HHA504_assignment_storage/blob/main/azure_storage.py) (NOTE: This .py file was converted from Google Colab)
+        * Make sure to substitute in your key name (like AZURE_STORAGE_ACCESS_KEY), container name, and name of the file you want to upload, as needed in the code
+    * NOTE: I originally put the code in a .py file rather than Google Colab, but installing the azure-blob-storage package will require installing Rust. From what I researched, it seems that Rust can only be installed globally and not on a venv. Thus, I chose to move to Colab rather than doing a global installation.  
 
 ### GCP
 #### Uploading within GCP itself
@@ -54,6 +56,10 @@
         * Enforce public access prevention on this bucket: Checked
 2. Create the bucket, then click "Upload" to upload a file/folder
 ![uploaded a file](img/gcp/upload_process_3.png)
+    * Extra
+        * Click the 3-dot symbol of the item you uploaded, then click "Authenticated URL"
+![Click "Authenticated URL"](img/gcp/upload_process_9.png)
+        * Copy and paste the url into another tab to view your item
 
 ### Uploading outside of GCP to Cloud Storage + Python code
 3. Go to "IAM - IAM & Admin"
