@@ -13,7 +13,7 @@
     * Primary workload: Other
     * Redundancy: Locally-redundant storage (LRS)
 ![Basics tab configurations](img/azure/upload_process_2.png)
-3. Create the resource, then go to it after it's made
+3. Create the resource, go to it after it's made, and click "Containers" in the left panel
 ![Created resource's info](img/azure/upload_process_3.png)
 4. Click "+ Container," make a name for it, then click "Create"
 ![Create a new container](img/azure/upload_process_4.png)
