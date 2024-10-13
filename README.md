@@ -79,3 +79,41 @@
 12. Create python code to upload files to storage
     * This repo's code is found in [gcp_storage.py](https://github.com/dnce17/HHA504_assignment_storage/blob/main/gcp_storage.py)
         * The comments note the things to replace with your key, bucket name, etc. 
+
+### Explore Storage Features For Managing and Securing Data 
+#### Azure
+* Storage Accounts
+    * In the "Security + networking" tab...
+        * Networking tab
+            * can configure public network access
+        * Access keys tab
+            * can rotate keys
+        * Shared access signature tab
+            * can give storage account access to clients with differing permissions
+        * Encryption
+        * Microsoft Defender for Cloud
+    * In the "Data management" tab...
+        * Data protecton tab
+            * has options for recovering data when modified or deleted
+        * Lifecycle management tab
+            * Can create rules to move data to certain access tiers or have them expire at the end of its lifecycle
+* Containers
+    * change access level
+    * access control (IAM)
+
+#### GCP
+* IAM
+    * create deny policies
+    * remove or grant access in IAM tab or in a specific service account
+    * delete existing keys from service accounts
+* Buckets
+    * Permission
+        * prevent public access
+        * switch to fine-grained object access 
+    * Protection
+        * change soft delete policy
+        * turn object versioning off or on
+        * set a bucket or object retention policy
+        * default event-based hold option 
+    * Lifecycle
+        * add or delete lifecycle rules
